@@ -24,10 +24,10 @@ namespace API.Entities
 
 
 
-        public int GetAge()
-        {
-            return DateOfBirth.CalculteAge();
-        }
+        // public int GetAge()
+        // {
+        //     return DateOfBirth.CalculteAge();
+        // }
 
 
 
