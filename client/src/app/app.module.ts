@@ -25,6 +25,7 @@ import { ServerErrorComponent } from './errors/server-error/server-error.compone
 import { MembersService } from './_services/members.service';
 import { MemberCardComponent } from './members/member-card/member-card.component';
 import { JwtInterceptor } from './interceptors/jwt.interceptor';
+import { MemberEditComponent } from './members/member-edit/member-edit.component';
 
 
 
@@ -43,7 +44,8 @@ import { JwtInterceptor } from './interceptors/jwt.interceptor';
     TestErrorsComponent,
     NotFoundComponent,
     ServerErrorComponent,
-    MemberCardComponent
+    MemberCardComponent,
+    MemberEditComponent
   ],
   imports: [
     BrowserModule,
