@@ -17,16 +17,8 @@ namespace API.Controllers
         [Authorize]
         [HttpGet("auth")]
         public ActionResult<string> GetSecret()
-        {
-            if (true)
-            {
-                return Unauthorized();                
-            }
-            else
-            {
-                return "secret text";
-            }
-
+        {            
+            return "secret text";            
         }
 
         
