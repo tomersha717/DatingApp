@@ -10,23 +10,28 @@ import { AccountService } from './_services/account.service';
 })
 export class AppComponent implements OnInit{
   title = 'The Dating App';
+  users: any ;
 
   constructor(public accountService: AccountService) {}
-  users: any ;
-  url: string = "https://localhost:5001/api/users";
+
   
-  
-  ngOnInit() {    
+
+
+  ngOnInit() {
     this.setCurrentUser();
   }
 
   setCurrentUser(){
-    const user: User = JSON.parse(localStorage.getItem('user') || '{}');
-    this.accountService.setCurrentUser(user);
-  }
-  
-  
+    const user: User = JSON.parse(localStorage.getItem('user'));
 
-  
+    if (user) {
+      this.accountService.setCurrentUser(user);
+    }
+
+  }
+
+
+
+
 
 }

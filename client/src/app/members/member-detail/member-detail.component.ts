@@ -19,6 +19,7 @@ export class MemberDetailComponent implements OnInit {
 
   ngOnInit(): void {
     this.loadMember();
+    console.log(this.member);
 
     this.galleryOptions = [
       {

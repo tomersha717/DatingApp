@@ -24,32 +24,27 @@ export class NavComponent implements OnInit {
 
   ngOnInit(): void {
 
-    if(localStorage.getItem('user') == null)
-    {
-      this.accountService.currentUserSource.next(null);
-    }
+    // if(localStorage.getItem('user') == null)
+    // {
+    //   this.accountService.currentUserSource.next(null);
+    // }
       // this.accountService.currentUser$.subscribe((data) => {
       // console.log('Test: ', data?.username);
       // });
   }
 
-  login(){
-    //console.log(this.model);
-    this.accountService.login(this.model).subscribe(response =>{
-      console.log(response);
+
+
+  login() {
+    this.accountService.login(this.model).subscribe(response => {
       this.router.navigateByUrl('/members');
-    });
+    })
   }
 
-
-
-
-  logout(){
+  logout() {
     this.accountService.logout();
-    this.router.navigateByUrl('/');
+    this.router.navigateByUrl('/')
   }
-
-
 
 
 }
