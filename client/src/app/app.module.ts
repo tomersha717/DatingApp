@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
-import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -59,8 +59,7 @@ import { DateInputComponent } from './_forms/date-input/date-input.component';
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
-    SharedModule,
-    BsDatepickerModule.forRoot()
+    SharedModule
   ],
   providers: [
     AccountService,
