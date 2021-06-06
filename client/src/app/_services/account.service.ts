@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 import { User } from '../_models/user';
-import { Observable, ReplaySubject } from 'rxjs';
+import { ReplaySubject } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
@@ -11,7 +11,7 @@ import { environment } from 'src/environments/environment';
 
 export class AccountService{
 
-  public currentUserSource = new ReplaySubject<User | null>(1);
+  public currentUserSource = new ReplaySubject<User>(1);
 
 
 
