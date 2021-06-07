@@ -1,3 +1,36 @@
+
+<div class="text-center mt-3">
+  <h2>Your matches - {{pagination?.totalItems}} found</h2>
+</div>
+
+
+<form class="row g-3" #form="ngForm" (ngSubmit)="loadMembers()" autocomplete="off">
+  <div class="col-auto">
+    <label for="ageFrom">Age from: </label>
+    <input type="number" class="form-control" style="width: 80px;" id="ageFrom" name="minAge" [(ngModel)]="userParams.minAge">
+  </div>
+  <div class="col-auto">
+    <label for="ageTo">Age to: </label>
+    <input type="number" class="form-control" style="width: 80px;" id="ageTo" name="maxAge" [(ngModel)]="userParams.maxAge">
+  </div>
+  <div class="col-auto">
+    <label for="genders">Shows: </label>
+    <select name="gender" class="form-select" id="genders"  [(ngModel)]="userParams.gender" aria-label="Default select example" style="width: 120px;">
+      <option *ngFor="let gender of genderList" [value]="gender.value">{{gender.display}}</option>
+    </select>
+  </div>
+  <div class="row g-2">
+    <div class="col-auto">
+      <button class="btn btn-primary mb-3" type="submit">Apply Filters</button>
+    </div>
+    <div class="col-auto">
+      <button (click)="resetFilters()" class="btn btn-info ml-1" type="submit">Reset Filters</button>
+    </div>
+  </div>
+</form>
+
+
+
 <div class="row">
   <div *ngFor="let member of members" class="col-2">
     <app-member-card [member]="member"></app-member-card>
