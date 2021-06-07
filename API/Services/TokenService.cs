@@ -31,7 +31,8 @@ namespace API.Services
             //Diside claim by key and value - for this example our token will check by name only
             var claims = new List<Claim>
             {
-                new Claim(JwtRegisteredClaimNames.NameId, user.UserName)
+                new Claim(JwtRegisteredClaimNames.NameId, user.Id.ToString()),
+                new Claim(JwtRegisteredClaimNames.UniqueName, user.UserName)
             };
 
             //Credentials = אישורים
