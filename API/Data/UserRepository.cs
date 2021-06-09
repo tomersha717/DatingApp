@@ -45,8 +45,8 @@ namespace API.Data
 
             query = userParams.OrderBy switch
             {
-                "created" => query.OrderByDescending(u => u.Created), //this is case for created
-                _ => query.OrderByDescending(u => u.LastActive) //this is case for defualt
+                "created" => query.OrderByDescending(u => u.Created), //this is a case for created
+                _ => query.OrderByDescending(u => u.LastActive) //this is a case for defualt
                 
             };
             
