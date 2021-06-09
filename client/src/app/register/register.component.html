@@ -27,8 +27,8 @@
     <app-date-input [formControl]='registerForm.controls["dateOfBirth"]' [label]='"Date Of Birth"' [maxDate]='maxDate'></app-date-input>
     <app-text-input [formControl]='registerForm.controls["city"]' [lable]='"City"'></app-text-input>
     <app-text-input [formControl]='registerForm.controls["country"]' [lable]='"Country"'></app-text-input>
-    <app-text-input [formControl]='registerForm.controls["password"]' [lable]='"Password"' type='"password"'></app-text-input>
-    <app-text-input [formControl]='registerForm.controls["confirmPassword"]' [lable]='"Confirm Password"'></app-text-input>
+    <app-text-input [formControl]='registerForm.controls["password"]' [lable]='"Password"' type="password"></app-text-input>
+    <app-text-input [formControl]='registerForm.controls["confirmPassword"]' [lable]='"Confirm Password"' type="password"></app-text-input>
 
     <div class="row" *ngIf="validationErrors.length > 0">
       <ul class="text-danger">
