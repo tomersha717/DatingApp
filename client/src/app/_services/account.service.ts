@@ -11,7 +11,7 @@ import { environment } from 'src/environments/environment';
 
 export class AccountService{
 
-  public currentUserSource = new ReplaySubject<User | null>(1);
+  public currentUserSource = new ReplaySubject<User>(1);
 
 
 

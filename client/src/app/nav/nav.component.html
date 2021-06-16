@@ -9,7 +9,7 @@
                 <a class="nav-link" routerLink='/members' routerLinkActive="active">Matches</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" routerLink='/lists' routerLinkActive="active">Lists</a>
+                <a class="nav-link" routerLink='/lists' routerLinkActive="active">Likes</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" routerLink='/messages' routerLinkActive="active">Messages</a>
@@ -17,7 +17,7 @@
             <li *appHasRole='["Admin","Moderator"]' class="nav-item">
               <a class="nav-link" routerLink='/admin' routerLinkActive="active">Admin</a>
             </li>
-            <li *appHasRole='["Admin","Moderator"]' class="nav-item">
+            <li class="nav-item">
                 <a class="nav-link" routerLink='/errors' routerLinkActive="active">Errors</a>
             </li>
           </ng-container>
@@ -25,7 +25,7 @@
 
         <div class="dropdown" *ngIf="(accountService.currentUser$ | async) as user" dropdown>
           <img src="{{user.photoUrl || './assets/user.png'}}" >
-          <a class="dropdown-toggle text-light" dropdownToggle>Welcome {{user.knownAs | titlecase}}</a>
+          <a class="dropdown-toggle text-light" dropdownToggle>Welcome {{user.knownAs || user.userName | titlecase}}</a>
           <div class="dropdown-menu" *dropdownMenu>
               <a class="dropdown-item" routerLink='/member/edit'>Edit Profile</a>
               <div class="dropdown-divider"></div>
